@@ -13,7 +13,7 @@
 
 + Python 3.4+
 + [shbus](https://github.com/hebingchang/shanghai-realtime-bus) 数据源完全基于该项目的成果，再次感谢该项目！
-+ requests pycryptodomo protobuf flask
++ requests pycryptodome protobuf flask
 + chrome (或其他浏览器)
 
 ### 调试运行
