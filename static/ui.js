@@ -402,9 +402,7 @@ function compareDistance(a, b) {
 	} else {
 		bb = parseInt(b);
 	}
-	//alert(aa,bb);
 	if (aa > bb) {
-		//alert(a,b);
 		return true;
 
 	} else {
