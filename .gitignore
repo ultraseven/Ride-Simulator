@@ -1,3 +1,7 @@
 *.pyc
 rs/shbus/*
 test.py
+kill.server
+server.pid
+run.server
+data/BusName/all.csv
