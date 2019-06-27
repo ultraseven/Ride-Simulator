@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=0.8, user-scalable=no" />
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+<link href="/static/style.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="/static/ui.js" defer="defer"></script>
+<title>模拟运转</title>
+</head>
+
+<body onload="init()">
+
+<div id="head">
+	<p>
+<!--	<input id="bs" name="bs" type="button" value="刷新车辆" onclick="getBus()"/>-->
+	<input id="ln" name="ln" type="text" value="" size="10" maxlength="12" onfocus="this.select()" onkeyup="searchLine()" onchange="searchLine()"/>
+	<input id="sm" name="sm" type="button" value="设定线路" onclick="changeLine()"/></p>
+</div>
+<div id="list">
+</div>
+<div id="info">
+    <div id="st1">
+        <p>更新时间</p>
+        <p><span id="sns1"></span>-><span id="sne1"></span></p>
+        <p><span id="sts1"></span>-<span id="ste1"></span></p>
+    </div>
+    <div id="st2">
+        <p><span id="rnt">&nbsp;</span></p>
+        <p><span id="sns2"></span>-><span id="sne2"></span></p>
+        <p><span id="sts2"></span>-<span id="ste2"></span></p>
+    </div>
+</div>
+<div id="cont1"></div>
+<div id="cont2"></div>
+</body>
+</html>

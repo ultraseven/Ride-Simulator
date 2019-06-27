@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+html,body {
+	background-color: #CCC;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	overflow:auto;
+}
+
+#head {
+	margin: 0px;
+	padding: 0px;
+	height: 100px;
+	width: 100%;
+	clear: both;
+	background-color: #CCC;
+	z-index:2;
+	bottom:0;
+	left:0;
+	position:absolute;
+	top: expression_r(documentElement.scrollTop);
+}
+#head p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;	
+	line-height: 100px;
+}
+
+#info {
+	margin: 0px;
+	padding: 0px;
+	height: 60px;
+	width: 100%;
+	clear: both;
+}
+
+
+#ln {
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+	border-style: none;
+	text-align: center;	
+	height: 70px;
+}
+
+#sm {
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+	border-style: none;
+	text-align: center;
+	height: 70px;
+	width: 120px;
+	background-color: #DDD;
+	cursor: pointer;
+}
+
+#bs {
+	margin: 0px;
+	padding: 0px;
+/*	margin-left: 20px;	*/
+	font-size: 20px;
+	border-style: none;
+	text-align: center;
+	height: 70px;
+	width: 120px;
+	background-color: #DDD;
+	cursor: pointer;
+}
+
+#cont1,#cont2,#st1,#st2,#ref {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+#st1,#st2 {
+	margin: 0px;
+	padding: 0px;
+/*	margin-top: 100px;	*/
+	height: 80px;
+	width: 50%;
+}
+#st1 p,#st2 p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	line-height: 26px;
+	color: #666;
+}
+
+#cont1,#cont2 {
+	width: 50%;
+	height: 2500px;
+}
+#ref {
+	width: 2%;
+	height: 100%;
+	background-color: #CCC;
+}
+
+#st1 p{
+	margin-right: 30px;
+	text-align: right;
+}
+#st2 p{
+	margin-left: 30px;
+	text-align: left;
+}
+
+#cont1,#st1 {
+	background-color: #CFF;
+}
+#cont2,#st2 {
+	background-color: #FFC;
+}
+
+.stop1,.stop2{
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+	min-height: 30px;
+	width: 90%;
+	line-height: 30px;
+	color: #000;
+}
+
+.bus1,.bus2,.tbus1,.tbus2 {
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0px;
+	padding: 0px;
+	min-height: 20px;
+	width: 90%;
+	line-height: 20px;
+}
+.bus1 {
+	padding-right: 10px;
+}
+.bus2 {
+	padding-left: 10px;
+}
+.dc {
+	color: #F3F;
+}
+.px {
+	color: #F3F;
+}
+.pd {
+	font-size: 14px;
+	color: #4A689C;
+}
+.stop1,.bus1,.tbus1 {
+	margin-right: 10px;
+	float: right;
+	border-right-width: 5px;
+	border-right-style: solid;
+	border-right-color: #090;
+	text-align: right;
+}
+.stop2,.bus2,.tbus2 {
+	margin-left: 10px;
+	width: 90%;
+	float: left;
+	border-left-width: 5px;
+	border-left-style: solid;
+	border-left-color: #F90;
+	text-align: left;
+}
+
+.dis {
+	font-size: 14px;
+	font-weight: normal;
+	color: #999;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+#list {
+	margin: 0px;
+	padding: 0px;
+	max-height: 200px;
+	width: 100%;
+	clear: both;
+	background-color: #EEE;
+	z-index:3;
+	bottom:100px;
+	left:0;
+	position:absolute;
+	overflow: auto;
+	border-top: 1px solid #CCC;
+}
+#list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#list ul li {
+	display: block;
+	line-height: 30px;
+	font-size: 14px;
+	float: left;
+	background-color: #FFF;
+	margin: 3px;
+	padding: 0 5px;
+	cursor: pointer;
+	border: 1px solid #DDD
+}
+#list ul li:hover {
+	background-color: #DDD;
+}
