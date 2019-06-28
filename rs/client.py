@@ -51,6 +51,7 @@ class RSClient(shbus.realtime.client):
 		car = dict()
 
 		stop = self.getStationNum(line_name, direction) - 1
+		stop_max = stop
 		while(stop > 0):
 			buses = self.getBusesByStopID(line_name, stop, direction)
 			dis_max = min(stop, 20)
@@ -74,6 +75,9 @@ class RSClient(shbus.realtime.client):
 						if (dis_max > dis):
 							dis_max = dis
 			dis_max -= 1
+			if (stop == stop_max and dis_n1 == 0 and dis_n2 ==0):
+				stop -= 1
+				continue
 			if (dis_max > 1): dis_max -= 1
 			if (dis_n1 == 0): break 
 			if (dis_n2 == 0 and dis_n1 < 3): break 

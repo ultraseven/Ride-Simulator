@@ -13,7 +13,7 @@
 
 + Python 3.4+
 + [shbus](https://github.com/hebingchang/shanghai-realtime-bus) 数据源完全基于该项目的成果，再次感谢该项目！
-+ requests pycryptodomo protobuf flask
++ requests pycryptodome protobuf flask
 + chrome (或其他浏览器)
 
 ### 调试运行
@@ -29,6 +29,12 @@
 ### 线路直达URL
 
 + http://127.0.0.1:5000/71路 或 http://127.0.0.1:5000/71
+
+### 车辆改名
+
+可以将车牌号替换成自定义的名称（例如自编号）。
+在data/BusName文件夹中放入以.csv为后缀名的文件，程序启动时会自动载入表格内的对应关系，具体格式参考文件夹中已有表格。
+本项目不提供更多的“车牌-自编号”数据。
 
 # 授权方式
 
