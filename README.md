@@ -24,7 +24,7 @@
 ### 后台需求
 
 + Python 3.4+
-+ [hebingchang/shanghai-realtime-bus](https://github.com/hebingchang/shanghai-realtime-bus) 数据源完全基于该项目的成果，感谢该项目！该项目的安装可能会有一些问题，可参考这个[issue](https://github.com/hebingchang/shanghai-realtime-bus/issues/1#issuecomment-506945755)
++ 'pip install shbus' [hebingchang/shanghai-realtime-bus](https://github.com/hebingchang/shanghai-realtime-bus) 数据源完全基于该项目的成果，感谢该项目！
 + 'pip install flask'
 + chrome (或其他浏览器)
 
