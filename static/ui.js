@@ -35,7 +35,9 @@ function refreshStart() {
 }
 
 function init() {
-	var il = window.location.pathname.replace('/', '');
+	var il1 = window.location.pathname.replace('/', '');
+	var il2 = window.location.href.split('?', 2)[1];
+	var il = il1 || il2;
 	if (il != undefined) {
 		document.getElementById("ln").value = decodeURI(il);
 		changeLine();
@@ -143,16 +145,13 @@ function getBus() {
 	if (document.getElementById("ln").value == '') {
 		return;
 	}
-	//document.getElementById("bs").style.backgroundColor = "#FFCC00";
 	var http = new XMLHttpRequest();
 	http.onreadystatechange = function () {
 		if (http.readyState == 4 && http.status == 200) {
 			var bus = JSON.parse(http.responseText);
 			loadBus(bus);
 			document.getElementById("rnt").innerHTML = getTimeNow();
-			//document.getElementById("bs").style.backgroundColor = "#DDDDDD";
 		} else if (http.readyState == 4) {
-			//document.getElementById("bs").style.backgroundColor = "#FFDDDD";
 		}
 	}
 	http.open("GET", 'bus/' + linename, true);
@@ -186,23 +185,20 @@ function getStop() {
 }
 
 function getInfo(info) {
-	if (info['success'] != 1) {
-		clear();
-
-		return;
-	}
-
+	clear();
 	linename = info['linename'];
-	document.getElementById("sns1").innerHTML = info["sns1"];
-	document.getElementById("sns2").innerHTML = info["sns2"];
-	document.getElementById("sne1").innerHTML = info["sne1"];
-	document.getElementById("sne2").innerHTML = info["sne2"];
-	document.getElementById("sts1").innerHTML = info["sts1"];
-	document.getElementById("sts2").innerHTML = info["sts2"];
-	document.getElementById("ste1").innerHTML = info["ste1"];
-	document.getElementById("ste2").innerHTML = info["ste2"];
 	document.title = linename + ' → 模拟运转';
 	document.getElementById("ln").value = linename;
+	if (info['success'] == 1) {
+		document.getElementById("sns1").innerHTML = info["sns1"];
+		document.getElementById("sns2").innerHTML = info["sns2"];
+		document.getElementById("sne1").innerHTML = info["sne1"];
+		document.getElementById("sne2").innerHTML = info["sne2"];
+		document.getElementById("sts1").innerHTML = info["sts1"];
+		document.getElementById("sts2").innerHTML = info["sts2"];
+		document.getElementById("ste1").innerHTML = info["ste1"];
+		document.getElementById("ste2").innerHTML = info["ste2"];
+	}
 	d1r = 0;
 	d2r = 0;
 	getStop();

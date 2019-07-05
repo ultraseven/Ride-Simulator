@@ -114,21 +114,23 @@ class RSClient(shbus.realtime.client):
 				"1":self.getStartTimeByDirection(line_name, False)}
 
 	def getInfo(self, line_name):
-		basic_info = shbus.lineinfo.LineInfo(self.transLineName(line_name))
-		
 		info = dict()
-		
-		info["success"] = 1
 		info["linename"] = line_name
-		info["sts1"] = basic_info.up.early_time
-		info["ste1"] = basic_info.up.last_time
-		info["sts2"] = basic_info.down.early_time
-		info["ste2"] = basic_info.down.last_time
+		try:
+			basic_info = shbus.lineinfo.LineInfo(self.transLineName(line_name))
+		except ValueError:
+			info["success"] = 0
+		else:
+			info["success"] = 1
+			info["sts1"] = basic_info.up.early_time
+			info["ste1"] = basic_info.up.last_time
+			info["sts2"] = basic_info.down.early_time
+			info["ste2"] = basic_info.down.last_time
 
-		info["sns1"] = basic_info.up.first_station
-		info["sne1"] = basic_info.up.last_station
-		info["sns2"] = basic_info.down.first_station
-		info["sne2"] = basic_info.down.last_station
+			info["sns1"] = basic_info.up.first_station
+			info["sne1"] = basic_info.up.last_station
+			info["sns2"] = basic_info.down.first_station
+			info["sne2"] = basic_info.down.last_station
 
 		return info
 		
